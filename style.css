@@ -105,62 +105,37 @@ body {
 }
 
 /* Footer styles */
-[data-role="footer"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 20px;
+.footer {
+    background-color: #f4f4f4;
+    padding: 50px 0;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-/* Footer link styles */
-[data-role="footer"] .studyiq {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-[data-role="footer"] .studyiq:hover {
-    text-decoration: underline;
-}
-
-/* Footer section styles */
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
-    width: 33.33%;
-    float: left;
-    padding: 0 15px;
 }
 
 .footer-col-2 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    max-width: 200px;
+    margin: 20px 0;
 }
 
-.footer-col-3 ul {
+.footer ul {
     list-style-type: none;
     padding: 0;
 }
 
-.footer-col-3 ul li {
-    margin-bottom: 10px;
+.footer ul li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-.footer-col-3 ul li a {
-    color: #fff;
-    text-decoration: none;
+.footer ul li a {
+    color: #333;
 }
 
-.footer-col-3 ul li a:hover {
-    text-decoration: underline;
+.footer ul li a:hover {
+    color: #555;
 }
 
-/* Copyright text */
-.copyright {
-    margin-top: 20px;
-    color: #fff;
-    font-size: 14px;
+hr {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 20px 0;
 }
