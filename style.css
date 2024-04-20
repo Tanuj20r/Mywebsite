@@ -1,20 +1,15 @@
-/* Custom CSS for SSC GK RECORDED BATCH */
-
-/* Body styles */
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
+    background-color: #f5f5f5;
 }
 
-/* Page styles */
-#pageone {
+.container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 /* Header styles */
@@ -27,6 +22,20 @@ body {
     border-top-right-radius: 10px;
 }
 
+[data-role="header"] h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+[data-role="header"] p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
 /* Header link styles */
 .studyiq {
     color: #fff;
@@ -34,9 +43,16 @@ body {
     font-weight: bold;
 }
 
+.studyiq:hover {
+    text-decoration: underline;
+}
+
 /* Content styles */
 .ui-content {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Collapsible section styles */
@@ -58,6 +74,9 @@ body {
     padding: 15px 20px;
     margin: 0;
     cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 [data-role="collapsible"] h1:hover {
@@ -89,7 +108,7 @@ body {
 [data-role="footer"] {
     background-color: #4CAF50;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -104,4 +123,44 @@ body {
 
 [data-role="footer"] .studyiq:hover {
     text-decoration: underline;
+}
+
+/* Footer section styles */
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+    width: 33.33%;
+    float: left;
+    padding: 0 15px;
+}
+
+.footer-col-2 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-col-3 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-col-3 ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col-3 ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-col-3 ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright text */
+.copyright {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
 }
