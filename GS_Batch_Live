@@ -1,4 +1,13 @@
-<div class="ui-content" data-role="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Recorded</title>
+    <!-- Add any additional CSS or meta tags here -->
+</head>
+<body>
+    <div class="ui-content" data-role="main">
 		<div data-role="collapsible">
                     <h1>
                         SSC GK BATCH 2.0
