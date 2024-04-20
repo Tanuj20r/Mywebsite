@@ -7,50 +7,146 @@
     <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .flip-container {
+            perspective: 1000px;
+        }
+
+        .flip-container:hover .flipper, .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .flip-container, .front, .back {
+            width: 150px; /* Adjust the width as needed */
+            height: 150px; /* Adjust the height as needed */
+        }
+
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front, .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .batch-container {
+            width: calc(50% - 10px); /* Adjust the width as needed */
+        }
+
+        .batch {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <h1>✳️ PARMAR APP (AppX) ✳️</h1>
-        <p>Made By <a href="https://t.me/ikunalx" target="_blank">𝐊𝐔𝐍𝐀𝐋❤️</a></p>
-    </header>
+    <div data-role="page" id="pageone">
+        <div data-role="header">
+            <h1>
+                <b>✳️ PARMAR APP (AppX) ✳️</b>
+                <p>Made By <a class="studyiq" href="https://t.me/ikunalx" target="__blank">𝐊𝐔𝐍𝐀𝐋❤️</a></p>
+            </h1>
+        </div>
+    </div>
 
     <div class="main-content">
         <div class="batch-container">
-            <a href="GS_Recorded.html" class="batch" id="recorded-batch">
-                <img src="images/parmar-logo.jpg" alt="SSC GK RECORDED BATCH" onclick="showInfo('recorded')">
-                <h1>SSC GK RECORDED BATCH</h1>
-            </a>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="images/parmar-logo.jpg" alt="SSC GK RECORDED BATCH" onclick="flipCard(this)">
+                    </div>
+                    <div class="back" style="display: none;">
+                        <h3>Total Videos: 116</h3>
+                        <p>Total Pdfs: 372</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="batch-container">
             <a href="GS_Batch_Live.html" class="batch" id="live-batch">
-                <img src="images/parmar-logo.jpg" alt="SSC GK BATCH 2.0" onclick="showInfo('live')">
                 <h1 onclick="redirectTo('GS_Batch_Live.html')">SSC GK BATCH 2.0</h1>
+                <h3>Total Videos: 99</h3>
+                <p>Total Pdfs: 290</p>
             </a>
         </div>
     </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-col-1">
-                <h3>Download Our App</h3>
-                <div class="app-logo">
-                    <a href="https://t.me/Kunal_Store"><img src="images/Telegram-logo.png" alt="Telegram Group"></a>
-                </div>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/parmar-logo.jpg" alt="Logo">
             </div>
-            <div class="footer-col-2">
-                <img src="https://graph.org/file/d23049a4d9e8b9a37c548.png" alt="Kunal Store Logo">
-                <p>My Purpose is to provide free Education to all.</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Follow us</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Youtube</a></li>
-                </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
             </div>
         </div>
-        <hr>
-        <p class="copyright">Copyright 2024 - KUNAL</p>
     </footer>
 
     <script>
@@ -58,12 +154,11 @@
             window.location.href = url;
         }
 
-        function showInfo(batchType) {
-            if (batchType === 'recorded') {
-                alert("Total Videos: 116\nTotal PDFs: 372");
-            } else if (batchType === 'live') {
-                alert("Total Videos: 99\nTotal PDFs: 290");
-            }
+        function flipCard(element) {
+            var flipper = element.parentNode.parentNode;
+            flipper.classList.toggle('hover');
+            var back = flipper.querySelector('.back');
+            back.style.display = flipper.classList.contains('hover') ? 'block' : 'none';
         }
     </script>
 </body>
