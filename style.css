@@ -42,17 +42,32 @@ body {
 /* Collapsible section styles */
 [data-role="collapsible"] {
     margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+[data-role="collapsible"]:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 [data-role="collapsible"] h1 {
-    background-color: #ddd;
-    padding: 10px;
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: #fff;
+    padding: 15px 20px;
     margin: 0;
     cursor: pointer;
 }
 
 [data-role="collapsible"] h1:hover {
-    background-color: #ccc;
+    background: linear-gradient(to right, #45a049, #2e8b57);
+}
+
+[data-role="collapsible"] p {
+    padding: 0 20px;
+    margin: 0;
+    color: #555;
 }
 
 /* Video name styles */
