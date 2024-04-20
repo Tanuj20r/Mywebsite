@@ -1,16 +1,22 @@
-/* Add your CSS styles here */
+/* Reset default margin and padding */
 body, html {
     margin: 0;
     padding: 0;
+}
+
+/* Set background color and font family */
+body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
 
+/* Container styles */
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Header styles */
 header {
     background-color: #007bff;
     color: #fff;
@@ -23,27 +29,40 @@ header a {
     text-decoration: none;
 }
 
+/* Main section styles */
 main {
     padding: 20px;
 }
 
+/* Accordion header styles */
 .accordion-header {
     background-color: #007bff;
     color: #fff;
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
+.accordion-header:hover {
+    background-color: #0056b3;
+}
+
+/* Accordion content styles */
 .accordion-content {
     padding: 10px;
     display: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* Sub accordion styles */
 .sub-accordion {
     margin-left: 20px;
 }
 
+/* Video link styles */
 .video-link {
     padding: 5px 0;
 }
@@ -55,4 +74,18 @@ main {
 
 .link:hover {
     text-decoration: underline;
+}
+
+/* Info styles */
+.info {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.info p {
+    margin: 5px 0;
 }
