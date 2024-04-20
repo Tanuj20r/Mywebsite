@@ -99,10 +99,18 @@
     </header>
 
     <div class="main-content">
-        <a href="GS_Recorded.html">
-            <img src="images/parmar-logo.jpg" alt="SSC GK RECORDED BATCH">
-            <h1>SSC GK RECORDED BATCH</h1>
-        </a>
+        <div class="batch-container">
+            <a href="GS_Recorded.html" class="batch" id="recorded-batch">
+                <img src="images/parmar-logo.jpg" alt="SSC GK RECORDED BATCH" onclick="showInfo('recorded')">
+                <h1>SSC GK RECORDED BATCH</h1>
+            </a>
+            <a href="GS_Batch_Live.html" class="batch" id="live-batch">
+                <img src="images/parmar-logo.jpg" alt="SSC GK BATCH 2.0" onclick="showInfo('live')">
+                <h1 onclick="redirectTo('GS_Batch_Live.html')">SSC GK BATCH 2.0</h1>
+                <h3>Total Videos: 116</h3>
+                <p>Total Pdfs: 372</p>
+            </a>
+        </div>
     </div>
 
     <footer class="footer">
@@ -131,7 +139,18 @@
         <p class="copyright">Copyright 2024 - KUNAL</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+
+        function showInfo(batchType) {
+            if (batchType === 'recorded') {
+                alert("Total Videos: 116\nTotal PDFs: 372");
+            } else if (batchType === 'live') {
+                alert("Total Videos: 99\nTotal PDFs: 290");
+            }
+        }
+    </script>
 </body>
-</html>
+
