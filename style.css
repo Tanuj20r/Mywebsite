@@ -1,88 +1,92 @@
-/* Reset default margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-}
+/* Custom CSS for SSC GK RECORDED BATCH */
 
-/* Set background color and font family */
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
 }
 
-/* Container styles */
-.container {
+/* Page styles */
+#pageone {
     max-width: 800px;
     margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header styles */
-header {
-    background-color: #007bff;
+[data-role="header"] {
+    background-color: #4CAF50;
     color: #fff;
     padding: 20px;
     text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-header a {
+/* Header link styles */
+.studyiq {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Main section styles */
-main {
+/* Content styles */
+.ui-content {
     padding: 20px;
 }
 
-/* Accordion header styles */
-.accordion-header {
-    background-color: #007bff;
-    color: #fff;
+/* Collapsible section styles */
+[data-role="collapsible"] {
+    margin-bottom: 20px;
+}
+
+[data-role="collapsible"] h1 {
+    background-color: #ddd;
     padding: 10px;
-    margin: 10px 0;
+    margin: 0;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.accordion-header:hover {
-    background-color: #0056b3;
+[data-role="collapsible"] h1:hover {
+    background-color: #ccc;
 }
 
-/* Accordion content styles */
-.accordion-content {
-    padding: 10px;
-    display: none;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Sub accordion styles */
-.sub-accordion {
-    margin-left: 20px;
+/* Video name styles */
+.video_name {
+    font-weight: bold;
 }
 
 /* Video link styles */
-.video-link {
-    padding: 5px 0;
-}
-
-.link {
+.video a {
     color: #007bff;
     text-decoration: none;
 }
 
-.link:hover {
+.video a:hover {
     text-decoration: underline;
 }
 
-/* Info styles */
-.info {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Footer styles */
+[data-role="footer"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Footer link styles */
+[data-role="footer"] .studyiq {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+[data-role="footer"] .studyiq:hover {
+    text-decoration: underline;
 }
